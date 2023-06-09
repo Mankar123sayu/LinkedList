@@ -10,26 +10,34 @@ namespace LinkedList
     {
         public Node head;
 
-        public void Add(int data)
+        public void Display()
         {
-            Node node = new Node(data);
+            Node temp = this.head;
 
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
+        public void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
             if (this.head == null)
             {
-                this.head = node;
+                this.head = newNode;
             }
             else
             {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
             }
-            Console.WriteLine($"{node.data} is inserted into Linkled List");
         }
     }
 }
-    
-
