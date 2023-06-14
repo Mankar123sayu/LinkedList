@@ -11,9 +11,11 @@ namespace LinkedList
 
             LinkedList list = new LinkedList();
 
-            list.AddInReverseOrder(70);
-            list.AddInReverseOrder(30);
-            list.AddInReverseOrder(56);
+            list.Add(56);
+
+            list.Add(70);
+
+            list.InsertAtParticularPosition(1, 30);
             list.Display();
         }
     }
