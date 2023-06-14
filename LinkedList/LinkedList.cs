@@ -60,7 +60,7 @@ namespace LinkedList
             }
             Console.WriteLine($"{node.data} is inserted into Linkled List");
         }
-    
+
         public void Display1()
         {
             Node temp = this.head;
@@ -100,6 +100,14 @@ namespace LinkedList
             }
             newestNode.next = previous.next;
             previous.next = newestNode;
+        }
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            this.head = this.head.next;
         }
     }
 }
