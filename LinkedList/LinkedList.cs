@@ -126,8 +126,31 @@ namespace LinkedList
             }
             NewNode.next = null;
         }
+
+
+        public void Search(int value)
+        {
+
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data.Equals(value))
+                {
+                    Console.WriteLine(count + "th position");
+                }
+                node = node.next;
+                count++;
+            }
+
+        }
     }
 }
+
+
+
+
+
     
 
     
